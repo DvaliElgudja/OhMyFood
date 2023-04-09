@@ -150,6 +150,15 @@
     margin: 20px;
   }
   
+  .coeur{
+    background: transparent;
+    border: none;
+  }
+
+  .coeur:active{
+    background-color: red;
+  }
+
   .order {
     display: flex;
     justify-content: center;
