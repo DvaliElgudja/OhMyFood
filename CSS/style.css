@@ -295,6 +295,7 @@ h3 {
   right: 36px;
   top: 204px;  
 }
+
 .likeIcon:active,
 .menuLikeIcon:active{
   cursor: pointer;
