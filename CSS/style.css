@@ -260,12 +260,12 @@ h3 {
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
   object-position: center bottom;
-  /*comment center vers le bas*/
+ 
   display: block;
 }
 
 .imageCenteredCenter {
-  /*Juste pour la deuxieme image qui sur la maquette est centrée au centre contrairement aux autres*/
+ 
   object-position: center;
 }
 
@@ -362,6 +362,7 @@ h3 {
   body{
       min-width: 1024px;
   }
+}
 
   /******HEADER*****/
   .logo {
@@ -422,7 +423,7 @@ h3 {
   
   
   /* FOOTER */
-  footer {
+  footer{ 
     color: white;
     display: flex;
     flex-direction: column;
