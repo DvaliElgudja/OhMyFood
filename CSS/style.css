@@ -296,6 +296,8 @@ h3 {
   top: 204px;  
 }
 
+/* a modifier pour qu'au click ca reste colorer */
+
 .likeIcon:active,
 .menuLikeIcon:active{
   cursor: pointer;
