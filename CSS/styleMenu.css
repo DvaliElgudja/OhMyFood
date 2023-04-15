@@ -34,12 +34,14 @@ header{
     width: 90%;
     color: var(--lightBlack);
     padding: 25px 41px 0px 17px;
+    cursor: default;
 }
 .menu i{
     font-size: 20px;
     position: absolute;
     top: 36px;
     right: 41px;
+    cursor: pointer;
 }
 
 .menu{
