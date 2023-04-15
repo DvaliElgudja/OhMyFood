@@ -1,32 +1,40 @@
 /******HEADER*****/
-.navBar a{
+.navBar a {
     position: absolute;
     top: 24px;
     left: 23px;
     color: var(--grey3)
 }
-.navBar a:hover{
+
+.navBar a:hover {
     transform: scale(1.2);
 }
-nav{
+
+nav {
     position: fixed;
     width: 100%;
     z-index: 1;
 }
-header{
-    height:63px;
+
+header {
+    height: 63px;
+}
+
+.points {
+    overflow: hidden;
 }
 
 /******MAIN*****/
-.menuTitle{
+.menuTitle {
     position: relative;
     width: 100%;
     min-height: 55px;
     display: flex;
     align-items: center;
-    
+
 }
-.menu h2{
+
+.menu h2 {
     font-family: 'Shrikhand';
     font-weight: 400;
     font-size: 28px;
@@ -34,19 +42,16 @@ header{
     width: 90%;
     color: var(--lightBlack);
     padding: 25px 41px 0px 17px;
-    cursor: default;
 }
-.menu i{
+
+.menuLikeIcon {
     font-size: 20px;
     position: absolute;
     top: 36px;
     right: 41px;
-    cursor: pointer;
 }
 
-
-
-.menu{
+.menu {
     position: relative;
     width: 100%;
     background-color: var(--background);
@@ -57,6 +62,7 @@ header{
     gap: 40px;
     top: -40px;
 }
+
 .imageMenuSet {
     width: 100%;
     height: 275px;
@@ -64,75 +70,170 @@ header{
     display: block;
 }
 
-.menu h3{
+.menu h3 {
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 19px;
     padding-bottom: 5px;
-    border-bottom : 3px solid var(--turquoise);
+    border-bottom: 3px solid var(--turquoise);
     width: 40px;
+
 }
-.menu h4{
+
+.menu h4 {
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 21px;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-.menuPart{
+
+.menuPart {
     padding-left: 13px;
     padding-right: 13px;
 }
-.menuPart button{
+
+.menuPart button {
     width: 100%;
-    height: 33%;
+    height: 69px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     text-align: left;
-    padding: 12px 15px 12px 15px;
+    padding: 12px 0px 12px 15px;
     border-radius: 15px;
     background-color: var(--white);
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border: none;
     cursor: pointer;
+    overflow: hidden;
 }
-.tasteAndPrice{
+
+.textContainer {
+    width: 100%;
+}
+
+.tasteAndPrice {
     width: 100%;
     display: flex;
     justify-content: space-between;
     position: relative;
 }
+
 .tasteAndPrice b {
-    color:var(--grey3);
+    color: var(--grey3);
     position: absolute;
     right: 0px;
     bottom: 0px;
 }
-.tasteAndPrice p{
+
+.tasteAndPrice p {
     font-style: normal;
     font-weight: 300;
     font-size: 15.0431px;
     line-height: 18px;
-    width: 88%;
+    max-width: 100%;
+    width: fit-content;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 25px;
 }
 
 .menuPart ul {
     padding-top: 12px;
     display: flex;
     flex-direction: column;
-    gap:12px;
+    gap: 12px;
 }
 
+.menuPart li {
+    display: flex;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards, moveUp 1s ease-out forwards;
+}
 
+/*Checkbox*/
+.checkBox {
+    width: 65px;
+    height: 69px;
+    background-color: var(--turquoise);
+    border-radius: 0px 15px 15px 0px;
+    margin-right: -65px;
+    margin-left: 15px;
+    transition: all 0.3s;
+}
+
+.checkIcon {
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--turquoise);
+}
+
+.checkIcon::before {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuPart button:hover .checkBox,
+.menuPart button:focus .checkBox {
+    margin-right: 0px;
+}
+
+/*Animation des menus*/
+.menuPart li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.menuPart li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.menuPart li:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.menuPart li:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(45px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
 
 /*Boutton de Commande*/
-.orderButtonBox{
+.orderButtonBox {
     width: 100%;
     padding-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .orderButtonStyle:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.35);
@@ -156,42 +257,43 @@ header{
     transform: matrix(1, 0, 0, -1, 0, 0);
 }
 
-.item:focus{
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);   
-}
+@media screen and (min-width:1024px) {
 
-
-
-
-@media screen and (min-width:1024px){
     /******HEADER****/
-    .navBar a{
+    .navBar a {
         top: 40px;
     }
+
     /******MAIN****/
-    main{
+    main {
         background-color: var(--white);
     }
-    .menuFullBox{
+
+    .menuFullBox {
         width: 1024px;
         background-color: var(--background);
-        margin:auto;
+        margin: auto;
     }
-    .menu{
+
+    .menu {
         padding-top: 25px;
         align-items: center;
     }
+
     .menu h2 {
         width: fit-content;
         padding-left: 0;
         padding-right: 0;
     }
-    .menu i {
-        top:60px;
-        right:345px;
+
+    .menuLikeIconPos {
+        top: 60px;
+        right: 345px;
     }
-    .menu article{
+
+    .menu article {
         width: 60%;
         padding: 0px;
     }
+
 }
