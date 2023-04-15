@@ -44,6 +44,8 @@ header{
     cursor: pointer;
 }
 
+
+
 .menu{
     position: relative;
     width: 100%;
@@ -154,9 +156,12 @@ header{
     transform: matrix(1, 0, 0, -1, 0, 0);
 }
 
-.item:hover{
-    background-color: red;
+.item:focus{
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);   
 }
+
+
+
 
 @media screen and (min-width:1024px){
     /******HEADER****/
