@@ -166,7 +166,7 @@ header {
     border-radius: 0px 15px 15px 0px;
     margin-right: -65px;
     margin-left: 15px;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 .checkIcon {
